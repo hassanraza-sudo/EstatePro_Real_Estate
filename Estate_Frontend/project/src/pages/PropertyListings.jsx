@@ -15,9 +15,12 @@ const PropertyListing = () => {
         const type = params.get("type") || "";
         const price = params.get("price") || "";
 
-        const res = await axios.get(`http://localhost:5000/api/properties`, {
-          params: { location, type, price },
-        });
+        const res = await axios.get(
+  `https://your-backend.onrender.com/api/properties`,
+  {
+    params: { location, type, price },
+  }
+);
 
         setProperties(res.data);
       } catch (error) {
