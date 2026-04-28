@@ -16,7 +16,7 @@ const PropertyListing = () => {
         const price = params.get("price") || "";
 
         const res = await axios.get(
-  `https://your-backend.onrender.com/api/properties`,
+  `https://estatepro-real-estate.onrender.com/api/properties`,
   {
     params: { location, type, price },
   }
